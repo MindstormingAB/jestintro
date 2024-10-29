@@ -28,6 +28,14 @@ describe('testing of animal functions', () => {
     expect(myAnimal.age).toBe(9)
   })
 
+  it('increases the age twice as expected', () => {
+    expect(myAnimal.age).toBe(8)
+    myAnimal.aging()
+    expect(myAnimal.age).toBe(9)
+    myAnimal.aging()
+    expect(myAnimal.age).toBe(10)
+  })
+
   // Test 3 for toConsole
   it('prints the animal as expected', () => {
     const consoleSpy = jest.spyOn(console, 'log').mockImplementation(() => {})
